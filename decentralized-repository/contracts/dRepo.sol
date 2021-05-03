@@ -17,8 +17,8 @@ contract dRepo {
         return owners;
     }
 
-    function getRepository() public view returns(Object[] memory) {
-        return items[msg.sender];
+    function getRepository(address addr) public view returns(Object[] memory) {
+        return items[addr];
     }
 
     function exists(address addr) internal view returns (bool) {
