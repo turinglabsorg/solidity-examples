@@ -11,7 +11,6 @@ contract dRepo {
     }
 
     mapping(address => Object[]) private items;
-    mapping(address => Object[]) private tempItems;
     address[] private owners;
 
     function getOwners() public view returns(address[] memory) {
