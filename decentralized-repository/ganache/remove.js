@@ -22,7 +22,7 @@ async function main() {
   try {
     console.log('Trying removing data...')
     const result = await contract.methods
-      .remove(1)
+      .remove(0)
       .send({ from: OWNER_ADDRESS });
     console.log(result)
   } catch (e) {
