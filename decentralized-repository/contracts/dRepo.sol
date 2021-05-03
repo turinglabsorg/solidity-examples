@@ -55,4 +55,12 @@ contract dRepo {
             owners.push(msg.sender);
         }
     }
+
+    function get(address addr, string memory extID) public view returns (Object memory) {
+        for (uint i = 0; i < items[addr].length; i++) {
+            if (keccak256(abi.encodePacked(items[addr][i].extID)) == keccak256(abi.encodePacked(extID))) {
+                return items[addr][i];
+            }
+        }
+    }
 }

@@ -8,6 +8,7 @@
     "test": "truffle test",
     "ganache:deploy": "rm -rf build && truffle deploy --reset && npm run extract-abi",
     "ganache:add": "node ganache/add.js",
+    "ganache:get": "node ganache/get.js",
     "ganache:remove": "node ganache/remove.js",
     "ganache:owners": "node ganache/owners.js",
     "ganache:repository": "node ganache/repository.js"

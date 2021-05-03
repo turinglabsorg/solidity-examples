@@ -20,8 +20,8 @@ async function main() {
   );
 
   try {
-    console.log('Trying returning repository...')
-    const result = await nftContract.methods.getRepository(OWNER_ADDRESS).call();
+    console.log('Trying returning data...')
+    const result = await nftContract.methods.get(OWNER_ADDRESS, 'extID2').call();
     console.log(result)
   } catch (e) {
     console.log(e)
