@@ -31,6 +31,7 @@ contract dRepo {
     }
 
     function remove(uint256 index) public returns (bool) {
+        require(exists(msg.sender), 'User never added items in repository.');
         Object[] memory old = items[msg.sender];
         delete items[msg.sender];
         for (uint i = 0; i < old.length; i++) {
