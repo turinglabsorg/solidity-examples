@@ -1,0 +1,27 @@
+{
+  "name": "decentralized-repository",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ganache-cli": "ganache-cli -d -p 7545 --gasLimit=10000000",
+    "extract-abi": "truffle-export-abi -d ./build/contracts/ -o ./build/abi.json -v",
+    "test": "truffle test",
+    "ganache:deploy": "rm -rf build && truffle deploy --reset && npm run extract-abi",
+    "ganache:add": "node ganache/add.js",
+    "ganache:remove": "node ganache/remove.js",
+    "ganache:owners": "node ganache/owners.js",
+    "ganache:repository": "node ganache/repository.js"
+  },
+  "author": "turinglabs",
+  "license": "MIT",
+  "description": "",
+  "_id": "decentralized-repository@1.0.0",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "solc": "^0.8.4",
+    "truffle-export-abi": "^1.0.1"
+  }
+}
